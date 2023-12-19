@@ -15,11 +15,20 @@ let package = Package(
             targets: ["SQLite"]
         )
     ],
+    dependencies: [
+        .package(url: "git@github.com:HalRushton/SQLCipher.git", from: "0.0.4"),
+    ],
     targets: [
         .target(
             name: "SQLite",
+            dependencies: [
+                "SQLCipher"
+            ],
             exclude: [
                 "Info.plist"
+            ],
+            swiftSettings: [
+                .define("SQLITE_SWIFT_SQLCIPHER"),
             ]
         ),
         .testTarget(
