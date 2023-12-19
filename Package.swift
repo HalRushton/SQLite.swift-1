@@ -34,7 +34,7 @@ let package = Package(
         .testTarget(
             name: "SQLiteTests",
             dependencies: [
-                "SQLite",
+                "SQLite"
             ],
             path: "Tests/SQLiteTests",
             exclude: [
