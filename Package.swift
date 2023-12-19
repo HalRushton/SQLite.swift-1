@@ -22,7 +22,7 @@ let package = Package(
         .target(
             name: "SQLite",
             dependencies: [
-                "SQLCipher",
+                "SQLCipher"
             ],
             exclude: [
                 "Info.plist"
